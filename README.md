@@ -1,6 +1,35 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-03-23 18:36:57
+
+Yet again, this stuff is blowing my mind. Currently working on Ruby still with App Academy. Quarantine is still in full force and giving me a little bit of agraphobia. Leaving the house has now become a mental battle.
+
+```js
+
+def combinations(arr)
+
+  hold = []
+  // starts the first loop
+  arr.each_with_index do |ele1, indx1|
+    // starts the second loop inside the first
+    arr.each_with_index do |ele2, indx2|
+    	if indx2 > indx1 // checks if the second index is larger than the first, if so pair them
+          hold << [ele1, ele2] // this returns an array to the array without attaching a ", "
+        end
+    end
+  end
+  return hold
+end
+
+print combinations(["a", "b", "c"]); # => // [ [ "a", "b" ], [ "a", "c" ], [ "b", "c" ] ]
+puts
+
+print combinations([0, 1, 2, 3]); # => // [ [ 0, 1 ], [ 0, 2 ], [ 0, 3 ], [ 1, 2 ], [ 1, 3 ], [ 2, 3 ] ]
+puts
+
+```
+
 ### 2020-03-20 19:03:10
 
 Start AppAcademy today. Looking at Ruby is actually kind of interesting. Lots of similar thing, that are a little different. Actually progressing through the intro pretty fast purely because of my exposure to JS in the last few months. Going to try and get as much of this done during quarantine as possible.
