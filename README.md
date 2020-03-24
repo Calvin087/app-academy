@@ -1,6 +1,32 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-03-24 19:10:01
+
+Something below was new to me, the ... in Ruby.
+2 Dots allows me to go from the chosen character up to and including the final character.
+
+3 Dots goes from char 1 up to but NOT including the chosen character.
+
+```js
+
+def pig_latin_word(word)
+
+  vowels = "aeiou"
+  
+  if vowels.include?(word[0])
+    return word + "yay" 
+  end
+  
+  word.each_char.with_index do |char, i|
+  	if vowels.include?(char)
+      return word[i..-1] + word[0...i] + "ay"
+    end
+  end
+end
+
+```
+
 ### 2020-03-23 18:36:57
 
 Yet again, this stuff is blowing my mind. Currently working on Ruby still with App Academy. Quarantine is still in full force and giving me a little bit of agraphobia. Leaving the house has now become a mental battle.
