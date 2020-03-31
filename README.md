@@ -1,6 +1,10 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+2020-03-31 17:20:58
+
+Keep forgetting to update this journal. AppAcademy IO is really pushing me along the learning curve. Understanding things much better than with JS. Ruby is obviously written in a more english speaking style but may be actual teacher is just better.
+
 ### 2020-03-24 19:10:01
 
 Something below was new to me, the ... in Ruby.
