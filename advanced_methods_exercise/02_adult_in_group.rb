@@ -2,6 +2,23 @@
 # The method should return true if there is at least 1 person with an age of 18 or greater.
 # The method should return false otherwise.
 
+# My shitty version
+def adult_in_group?(arr)
+    arr.each do |age:, **|
+        if age > 18
+            return true
+        end
+    end
+    false
+end
+# My shitty version
+
+# Correct Solution
+def adult_in_group?(arr)
+    arr.any? { |person| person[:age] > 18 }
+end
+# Correct Solution
+
 
 people_1 = [
     {name: "Jack", age: 17},
