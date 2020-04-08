@@ -30,5 +30,3 @@ words = str.split
 return array.join(" ")
 end
 
-p alternating_case("code never lies, comments sometimes do.")
-# "CODE never LIES, comments SOMETIMES do."
