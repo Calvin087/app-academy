@@ -13,15 +13,13 @@ describe "Part 2:" do
       expect(hipsterfy("panther")).to eq("panthr")
       expect(hipsterfy("swimming")).to eq("swimmng")
     end
-
-    ###DONE 
     
     it "should return the original word if it contains no vowels" do
       expect(hipsterfy("rhythm")).to eq("rhythm")
       expect(hipsterfy("my")).to eq("my")
     end
   end
-
+###DONE 
   describe "vowel_counts" do
     it "should accept string as an arg" do
       expect { vowel_counts("code bootcamp") }.to_not raise_error
@@ -33,6 +31,7 @@ describe "Part 2:" do
       expect(vowel_counts("WILLIAMSBURG bridge")).to include({"i"=>3, "a"=>1, "u"=>1, "e"=>1})
     end
   end
+###DONE 
 
   describe "caesar_cipher" do
     it "should accept a message and a number (n) as an arg" do
@@ -55,3 +54,4 @@ describe "Part 2:" do
     end
   end
 end
+###DONE 
