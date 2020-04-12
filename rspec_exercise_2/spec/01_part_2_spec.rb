@@ -30,6 +30,8 @@ describe "Part 2:" do
     end
   end
 
+### DONE
+
   describe "substrings" do
     it "should accept a string as an arg" do
       expect { substrings("jump") }.to_not raise_error
@@ -41,6 +43,8 @@ describe "Part 2:" do
       expect(substrings("x")).to match_array ["x"]
     end
   end
+
+  ### DONE WHATTT
 
   describe "palindrome_substrings" do
     it "should accept a string as an arg" do
