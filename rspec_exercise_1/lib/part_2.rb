@@ -5,8 +5,9 @@ def hipsterfy(word)
 
     while i > 0
         if vowels.include?(word[i])
-            word[i] = ""
-            break
+            # word[i] = ""
+            return word[0...i] + word[i+1..-1]
+            # break
         end
         i -= 1
     end
@@ -15,22 +16,35 @@ def hipsterfy(word)
 end
 
 def vowel_counts(str)
-    str = str.downcase
-    vowels = "aeiou"
-    hash = Hash.new(0)
+    # str = str.downcase
+    # vowels = "aeiou"
+    # hash = Hash.new(0)
 
-    i = 0
-    while i < str.length
-        if vowels.include?(str[i])
-            hash[str[i]] += 1
+    # i = 0
+    # while i < str.length
+    #     if vowels.include?(str[i])
+    #         hash[str[i]] += 1
+    #     end
+    #     i += 1
+    # end
+    # return hash
+
+    hash = Hash.new(0)
+    vowels = "aeiou"
+
+    str.downcase.each_char do |char|
+        if vowels.include?(char)
+            hash[char] += 1
         end
-        i += 1
     end
-    return hash
+
+return hash
+
 end
 
 def caesar_cipher(str, n)
-    alph = "abcdefghijklmnopqrstuvwxyz"
+    # alph = "abcdefghijklmnopqrstuvwxyz"
+    alph = ("a".."z").to_a
     newStr = ""
 
     str.each_char do |char|
@@ -45,6 +59,3 @@ def caesar_cipher(str, n)
     end
     return newStr
 end
-
-p caesar_cipher("apple!", 1)
-# bqqmf
