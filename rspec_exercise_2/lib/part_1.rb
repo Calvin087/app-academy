@@ -1,3 +1,5 @@
+require "byebug"
+
 def partition(arr, n)
     arr1 = []
     arr2 = []
@@ -44,6 +46,8 @@ def starW(word)
     end
     return string
 end
+
+debugger
 
 def power_of_two?(num)
 
