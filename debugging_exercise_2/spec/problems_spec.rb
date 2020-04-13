@@ -36,6 +36,8 @@ describe "unique_chars?" do
     end
 end
 
+### DONE HARD
+
 describe "dupe_indices" do
     it "should accept an array as an arg" do
         expect { dupe_indices(["a", "b", "c", "c", "b"]) }.to_not raise_error
@@ -47,6 +49,8 @@ describe "dupe_indices" do
         expect(dupe_indices(["a", "b", "c"])).to eq({})
     end
 end
+
+### HARD
 
 describe "ana_array" do
     it "should accept two arrays as args" do
