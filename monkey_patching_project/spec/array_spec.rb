@@ -35,6 +35,8 @@ describe "Array" do
       end
     end
 
+    ### DONE
+
     describe "#median" do
       context "when there is an odd number of elements" do
         it "should return the middle element of the array when sorted" do
@@ -57,6 +59,8 @@ describe "Array" do
       end
     end
 
+    ### DONE
+
     describe "#counts" do
       it "should return a hash representing the count of each element of the array" do
         expect(["a", "b", "a", "b", "b", "c"].counts).to eq({"a"=>2, "b"=>3, "c"=>1})
@@ -64,6 +68,8 @@ describe "Array" do
       end
     end
   end
+
+  ###DONE
 
   describe "PART 2" do
     describe "#my_count" do
@@ -79,6 +85,8 @@ describe "Array" do
         arr.my_count("a")
       end
     end
+
+    ### DONE
 
     describe "#my_index" do
       it "should accept any value as an argument and return the index where that element is found in the array" do
@@ -106,6 +114,8 @@ describe "Array" do
       end
     end
 
+    ### DONE
+
     describe "#my_uniq" do
       it "should return a new array without duplicate elements in the order they first appeared in the original array" do
         expect(["a", "b", "a", "a", "b"].my_uniq).to eq(["a", "b"])
@@ -118,6 +128,8 @@ describe "Array" do
         arr.my_uniq
       end
     end
+
+    ### DONE
 
     describe "#my_transpose" do
       it "should transpose a 2D array with square dimensions by returning a new 2D array where the horizontal rows are converted to vertical columns" do
