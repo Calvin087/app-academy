@@ -48,13 +48,16 @@ end
 # find_bigrams("the theater is empty", ["cy", "em", "ty", "ea", "oo"])  # => ["em", "ty", "ea"]
 # find_bigrams("to the moon and back", ["ck", "oo", "ha", "at"])        # => ["ck", "oo"]
 def find_bigrams(str, bigrams)
-    bigramsA = []
-    bigrams.each do |big|
-        if str.include?(big)
-            bigramsA << big
-        end
-    end
-    return bigramsA
+    # bigramsA = []
+    # bigrams.each do |big|
+    #     if str.include?(big)
+    #         bigramsA << big
+    #     end
+    # end
+    # return bigramsA 
+    ## Working but not best way 
+
+    bigrams.select { |bigram| str.include?(bigram) } ## Correct answer
 end
 
 
@@ -75,9 +78,18 @@ class Hash
     # hash_2.my_select { |k, v| k + 1 == v }      # => {10=>11, 5=>6, 7=>8})
     # hash_2.my_select                            # => {4=>4}
     def my_select(&prc)
-
+        prc ||= Proc.new { |k, v| k == v }
+        new_hash = {}
+        self.each do |k, v|
+            new_hash[k] = v if prc.call(k, v)
+        end
+        return new_hash
     end
 end
+
+
+
+
 
 class String
     # Write a method, String#substrings, that takes in a optional length argument
@@ -89,7 +101,19 @@ class String
     # "cats".substrings     # => ["c", "ca", "cat", "cats", "a", "at", "ats", "t", "ts", "s"]
     # "cats".substrings(2)  # => ["ca", "at", "ts"]
     def substrings(length = nil)
+        subs = []
+        (0...self.length).each do |start_ind|
+            (start_ind...self.length).each do |end_ind|
+            sub = self[start_ind..end_ind]
+            subs << sub
+            end
+        end
 
+        if length.nil?
+            subs
+        else
+            subs.select { |str| str.length == length }
+        end
     end
 
 
@@ -103,6 +127,13 @@ class String
     # "bootcamp".caesar_cipher(2) #=> "dqqvecor"
     # "zebra".caesar_cipher(4)    #=> "difve"
     def caesar_cipher(num)
-
+        new_str = ""
+        alpha = ("a".."z").to_a
+        self.each_char do |char|
+            start_pos = alpha.index(char)
+            new_pos = (start_pos + num) % 26
+            new_str += alpha[new_pos]
+        end
+        return new_str
     end
 end
